@@ -23,23 +23,23 @@
                     |
                   <a href="/users/new" class="btn btn-default">Signup</a>
                 <% else %>
+                  Logged in as: <%= user["username"]%>
+                    |
                   <a href="/" class="btn btn-primary">Home</a>
                     |
                   <a href="/logout" class="btn btn-primary">Logout</a>
-                    |
-                  Hey, <%= user["username"]%>!
                 <% end %>
           </span>
         </div>
       </nav>
     <div class="container">
       <p>
-     
       </p>
-        
-      <p>
-        <%= flash["notice"] %>
-      </p>
+      <% if flash["notice"] != nil %>
+        <div class="alert alert-primary">
+         <%= flash["notice"] %>
+        </div>
+      <% end %>
 
       <%= yield %>
     <div>
