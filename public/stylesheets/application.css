@@ -1,0 +1,16 @@
+body {
+  background-color: palegreen;
+}
+
+p {
+  color: navy;
+}
+
+p a {
+  color: navy;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 48px;
+}
